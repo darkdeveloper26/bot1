@@ -24,9 +24,9 @@ async def on_ready():
 @bot.event
 async def on_message(message):
 	# CHECKS IF THE MESSAGE THAT WAS SENT IS EQUAL TO "HELLO".
-	if message.content == ("hello"):
+	if message.content == ("&help"):
 		# SENDS BACK A MESSAGE TO THE CHANNEL.
-		await message.channel.send("hey!")
+		await message.channel.send("No commands rn >:")
 
 
 
