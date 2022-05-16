@@ -32,6 +32,10 @@ async def on_ready():
 async def _8ball(ctx):
   await ctx.channel.send('Henlo guys welcome')
 
+@bot.command(name=('exit'))
+async def close(ctx):
+  exit(0)
+
 
 
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN.
