@@ -1,14 +1,14 @@
 import discord
 import os
 from dotenv import load_dotenv
-
+from discord.ext import commands
 # Loads the .env file that resides on the same level as the script.
 load_dotenv()
 # Grab the API token from the .env file.
 DISCORD_TOKEN = os.getenv("OTc0MjI5MDgxNDAwOTYzMTcy.GxJpxc.DmPN3Uc8djQ5D9VQQIIJZBqCVpJYyXFocYDJO4")
+#Bot command thing prefix
+bot = commands.Bot(command_prefix="&")
 
-# GETS THE CLIENT OBJECT FROM DISCORD.PY. CLIENT IS SYNONYMOUS WITH BOT.
-bot = discord.Client()
 
 # EVENT LISTENER FOR WHEN THE BOT HAS SWITCHED FROM OFFLINE TO ONLINE.
 @bot.event
@@ -28,12 +28,9 @@ async def on_ready():
 	print("✿﹕sushiㆍᶻz is in " + str(guild_count) + " server.")
 
 # EVENT LISTENER FOR WHEN A NEW MESSAGE IS SENT TO A CHANNEL.
-@bot.event
-async def on_message(message):
-	# CHECKS IF THE MESSAGE THAT WAS SENT IS EQUAL TO "HELLO".
-	if message.content == ("&help"):
-		# SENDS BACK A MESSAGE TO THE CHANNEL.
-		await message.channel.send("No commands rn >:")
+@bot.command(name='8ball')
+async def _8ball(ctx):
+  await ctx.channel.send('Henlo guys welcome')
 
 
 
