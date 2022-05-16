@@ -1,4 +1,11 @@
 import discord
+import os
+from dotenv import load_dotenv
+
+# Loads the .env file that resides on the same level as the script.
+load_dotenv()
+# Grab the API token from the .env file.
+DISCORD_TOKEN = os.getenv("OTc0MjI5MDgxNDAwOTYzMTcy.GxJpxc.DmPN3Uc8djQ5D9VQQIIJZBqCVpJYyXFocYDJO4")
 
 # GETS THE CLIENT OBJECT FROM DISCORD.PY. CLIENT IS SYNONYMOUS WITH BOT.
 bot = discord.Client()
@@ -18,7 +25,7 @@ async def on_ready():
 		guild_count = guild_count + 1
 
 	# PRINTS HOW MANY GUILDS / SERVERS THE BOT IS IN.
-	print("SampleDiscordBot is in " + str(guild_count) + " server.")
+	print("✿﹕sushiㆍᶻz is in " + str(guild_count) + " server.")
 
 # EVENT LISTENER FOR WHEN A NEW MESSAGE IS SENT TO A CHANNEL.
 @bot.event
