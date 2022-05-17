@@ -2,6 +2,7 @@ import discord
 import os
 from dotenv import load_dotenv
 from discord.ext import commands
+import time
 # Loads the .env file that resides on the same level as the script.
 load_dotenv()
 # Grab the API token from the .env file.
@@ -34,6 +35,8 @@ async def _8ball(ctx):
 
 @bot.command(name=('exit'))
 async def close(ctx):
+  await ctx.channel.send('Closing for maintenance...')
+  time.sleep(0.5)
   exit(0)
 
 
