@@ -43,7 +43,7 @@ async def close(ctx):
 async def servercount(ctx):
   await ctx.channel.send('Checking...')
   time.sleep(2.5)
-  await ctx.channel.send("✿﹕sushiㆍᶻz is in " + str(guild_count) + " server.")
+  await ctx.channel.send("✿﹕sushiㆍᶻz is in " + str(global guild_count) + " server.")
 
 
 
