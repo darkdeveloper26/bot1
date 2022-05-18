@@ -10,9 +10,6 @@ my_secret = os.environ['DISCORD_TOKEN']
 #Bot command thing prefix
 bot = commands.Bot(command_prefix="&")
 
-
-
-
 # EVENT LISTENER FOR WHEN THE BOT HAS SWITCHED FROM OFFLINE TO ONLINE.
 @bot.event
 async def on_ready():
