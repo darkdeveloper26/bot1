@@ -6,9 +6,11 @@ import time
 # Loads the .env file that resides on the same level as the script.
 load_dotenv()
 # Grab the API token from the .env file.
-DISCORD_TOKEN = os.getenv("OTc0MjI5MDgxNDAwOTYzMTcy.GxJpxc.DmPN3Uc8djQ5D9VQQIIJZBqCVpJYyXFocYDJO4")
+my_secret = os.environ['DISCORD_TOKEN']
 #Bot command thing prefix
 bot = commands.Bot(command_prefix="&")
+
+
 
 
 # EVENT LISTENER FOR WHEN THE BOT HAS SWITCHED FROM OFFLINE TO ONLINE.
