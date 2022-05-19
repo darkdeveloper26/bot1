@@ -6,7 +6,7 @@ import time
 # Loads the .env file that resides on the same level as the script.
 load_dotenv()
 # Grab the API token from the .env file.
-my_secret = os.environ['DISCORD_TOKEN']
+token = os.environ['DISCORD_TOKEN']
 #Bot command thing prefix
 bot = commands.Bot(command_prefix="&")
 
